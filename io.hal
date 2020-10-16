@@ -1,0 +1,17 @@
+# This file was created with the 7i96 Wizard on Jan 13 2020 11:42:58
+# If you make changes to this file your screwed
+
+net min-limit-home-joint-0 joint.0.neg-lim-sw-in <= hm2_7i96.0.gpio.000.in
+net min-limit-home-joint-0 joint.0.home-sw-in
+net min-limit-home-joint-1 joint.1.neg-lim-sw-in <= hm2_7i96.0.gpio.001.in
+net min-limit-home-joint-1 joint.1.home-sw-in
+net min-limit-joint-2 joint.2.neg-lim-sw-in <= hm2_7i96.0.gpio.002.in
+net max-limit-joint-0 joint.0.pos-lim-sw-in <= hm2_7i96.0.gpio.003.in
+net max-limit-joint-1 joint.1.pos-lim-sw-in <= hm2_7i96.0.gpio.004.in
+net max-limit-home-joint-2 joint.2.pos-lim-sw-in <= hm2_7i96.0.gpio.005.in
+net max-limit-home-joint-2 joint.2.home-sw-in
+net digital-input-0 motion.digital-in-00 <= hm2_7i96.0.gpio.007.in
+net digital-input-1 motion.digital-in-01 <= hm2_7i96.0.gpio.008.in
+net probe-input motion.probe-input <= hm2_7i96.0.gpio.009.in
+net spindle-on spindle.0.on => hm2_7i96.0.ssr.00.out-00
+net digital-out-0 motion.digital-out-00 => hm2_7i96.0.ssr.00.out-04

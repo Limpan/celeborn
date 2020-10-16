@@ -1,0 +1,5 @@
+*.bak
+*.var
+	
+autosave.halscope
+tool.tbl

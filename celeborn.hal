@@ -137,7 +137,8 @@ setp pid.2.maxerror [JOINT_2]MAX_ERROR
 
 # Standard I/O Block - EStop, Etc
 # create a signal for the estop loopback
-net estop-loop iocontrol.0.user-enable-out => iocontrol.0.emc-enable-in
+#net estop-loop iocontrol.0.user-enable-out => iocontrol.0.emc-enable-in
+net estop-loop hm2_7i96.0.gpio.010.in_not => iocontrol.0.emc-enable-in
 
 # create signals for tool loading loopback
 net tool-prep-loop iocontrol.0.tool-prepare => iocontrol.0.tool-prepared

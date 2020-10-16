@@ -1,2 +1,16 @@
 # Place any HAL commands in this file that you want to run before the GUI.
 # This file will not be written over by the configuration tool.
+
+#
+# Flash status LED unless motion is enable. Steady light when motion enabled.
+#
+loadrt siggen
+loadrt or2 count=1
+setp siggen.0.frequency 0.4
+addf or2.0 servo-thread
+addf siggen.0.update servo-thread
+
+net status-led-in0 or2.0.in0 <= siggen.0.clock
+net status-led-in1 or2.0.in1 <= motion.motion-enabled
+
+net status-led or2.0.out => hm2_7i96.0.ssr.00.out-03

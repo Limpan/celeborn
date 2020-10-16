@@ -1,5 +1,6 @@
 *.bak
 *.var
+*.swp
 	
 autosave.halscope
 tool.tbl
